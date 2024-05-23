@@ -65,10 +65,16 @@ class CashBox():
     }
 
     def __init__(self):
-        self.amount = [0,0,0,0]
+        self.coins = [0,0,0,0]
+        self.all_money = 0.0
+        self.received = 0.0
+        self.change = 0.0
 
     def money(self):
-        all_money = 0
-        for item in self.amount:
-            all_money += item * self.COIN_VALUES[item]
-        return all_money
+        for coin in self.COIN_VALUES:
+            self.coins[coin] = int(input(f"How many{coin}s ?: "))
+            self.all_money += self.COIN_VALUES[coin]
+        return self.all_money
+
+    def report(self):
+        print(self.money())

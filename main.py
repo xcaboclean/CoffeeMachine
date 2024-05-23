@@ -1,4 +1,4 @@
-from data import Menu, CoffeeMachine
+from data import Menu, CoffeeMachine, CashBox
 
 # TODO 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino)
 # TODO 2. Turn off the Coffee Machine by entering “off” to the prompt.
@@ -12,6 +12,8 @@ menu = Menu()
 print(menu.get_items())
 machine = CoffeeMachine(True)
 
+cash_box = CashBox()
+
 
 
 while machine.led == True:
@@ -21,6 +23,7 @@ while machine.led == True:
         machine.power_off()
     elif order =="report":
         machine.report()
+        cash_box.report()
     else:
         drink = menu.get_item(order)
         print(drink)
