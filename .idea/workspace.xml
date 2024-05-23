@@ -157,13 +157,22 @@
       <option name="project" value="LOCAL" />
       <updated>1716397466179</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="complete menu - all options">
+      <option name="closed" value="true" />
+      <created>1716466167321</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716466167321</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="intial commit - basic struct" />
     <MESSAGE value="restructuring" />
     <MESSAGE value="print menu test" />
-    <option name="LAST_COMMIT_MESSAGE" value="print menu test" />
+    <MESSAGE value="complete menu - all options" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete menu - all options" />
   </component>
 </project>

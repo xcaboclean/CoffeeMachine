@@ -12,11 +12,16 @@ menu = Menu()
 print(menu.get_items())
 machine = CoffeeMachine(True)
 
-order = input("Whats is your order?")
 
-if order == "off":
-    machine.power_off()
-else:
-    drink = menu.get_item(order)
-    print(drink)
+
+while machine.led == True:
+    order = input("Whats is your order?")
+
+    if order == "off":
+        machine.power_off()
+    elif order =="report":
+        machine.report()
+    else:
+        drink = menu.get_item(order)
+        print(drink)
 

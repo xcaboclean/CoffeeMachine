@@ -38,9 +38,17 @@ class CoffeeMachine():
 
     def __init__(self, led):
         self.led = led
+        self.resources = {
+            "water": 300,
+            "milk": 200,
+            "coffee": 100,
+        }
 
     def power_off(self):
         self.led = False
 
     def power_on(self):
         self.led = True
+
+    def report(self):
+        print(self.resources)
