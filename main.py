@@ -1,6 +1,6 @@
 from data import Menu, CoffeeMachine
 
-# TODO 1.  Prompt user by asking “What would you like? (espresso/latte/cappuccino)
+# TODO 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino)
 # TODO 2. Turn off the Coffee Machine by entering “off” to the prompt.
 # TODO 3. Print report of all coffee machine resources
 # TODO 4. Check resources sufficient?

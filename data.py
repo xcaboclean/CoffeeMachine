@@ -53,3 +53,22 @@ class CoffeeMachine():
     def report(self):
         for item in self.resources:
             print(f"-{item}:{self.resources[item]}")
+
+class CashBox():
+    CURRENCY={"$"}
+
+    COIN_VALUES = {
+        "quarter":0.25,
+        "dime": 0.10,
+        "nickle": 0.05,
+        "penne": 0.01,
+    }
+
+    def __init__(self):
+        self.amount = [0,0,0,0]
+
+    def money(self):
+        all_money = 0
+        for item in self.amount:
+            all_money += item * self.COIN_VALUES[item]
+        return all_money
