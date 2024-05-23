@@ -1,4 +1,5 @@
-from data import Menu
+from data import Menu, CoffeeMachine
+
 # TODO 1.  Prompt user by asking “What would you like? (espresso/latte/cappuccino)
 # TODO 2. Turn off the Coffee Machine by entering “off” to the prompt.
 # TODO 3. Print report of all coffee machine resources
@@ -9,3 +10,13 @@ from data import Menu
 
 menu = Menu()
 print(menu.get_items())
+machine = CoffeeMachine(True)
+
+order = input("Whats is your order?")
+
+if order == "off":
+    machine.power_off()
+else:
+    drink = menu.get_item(order)
+    print(drink)
+
