@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="906ac01e-7946-48a5-bd3b-882e5f043cc5" name="Changes" comment="resources of coffee machine">
+    <list default="true" id="906ac01e-7946-48a5-bd3b-882e5f043cc5" name="Changes" comment="report function">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716467779709</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="report function">
+      <option name="closed" value="true" />
+      <created>1716470026609</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716470026609</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -180,6 +189,7 @@
     <MESSAGE value="print menu test" />
     <MESSAGE value="complete menu - all options" />
     <MESSAGE value="resources of coffee machine" />
-    <option name="LAST_COMMIT_MESSAGE" value="resources of coffee machine" />
+    <MESSAGE value="report function" />
+    <option name="LAST_COMMIT_MESSAGE" value="report function" />
   </component>
 </project>
