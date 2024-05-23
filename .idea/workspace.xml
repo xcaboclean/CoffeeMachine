@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="906ac01e-7946-48a5-bd3b-882e5f043cc5" name="Changes" comment="class CashBox">
+    <list default="true" id="906ac01e-7946-48a5-bd3b-882e5f043cc5" name="Changes" comment="function report() of class CashBox">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -197,8 +197,27 @@
       <option name="project" value="LOCAL" />
       <updated>1716471689169</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="function report() of class CashBox">
+      <option name="closed" value="true" />
+      <created>1716484275134</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716484275134</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="intial commit - basic struct" />
@@ -208,6 +227,7 @@
     <MESSAGE value="resources of coffee machine" />
     <MESSAGE value="report function" />
     <MESSAGE value="class CashBox" />
-    <option name="LAST_COMMIT_MESSAGE" value="class CashBox" />
+    <MESSAGE value="function report() of class CashBox" />
+    <option name="LAST_COMMIT_MESSAGE" value="function report() of class CashBox" />
   </component>
 </project>

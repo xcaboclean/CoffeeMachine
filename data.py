@@ -65,16 +65,27 @@ class CashBox():
     }
 
     def __init__(self):
-        self.coins = [0,0,0,0]
+        self.coins = [0,0,0,0] # [quarters, dimes, nickles, pennies]
         self.all_money = 0.0
         self.received = 0.0
         self.change = 0.0
 
-    def money(self):
-        for coin in self.COIN_VALUES:
-            self.coins[coin] = int(input(f"How many{coin}s ?: "))
-            self.all_money += self.COIN_VALUES[coin]
-        return self.all_money
+    def insert_money(self, coin_dict):
+        for coin, count in coin_dict.items():
+            if coin in self.COIN_VALUES and isinstance(count, int) and count > 0:
+                index = list(self.COIN_VALUES.keys()).index(coin)
+                self.coins[index] += count
+                self.all_money += self.COIN_VALUES[coin] * count
+            else:
+                print("Invalid coin type.")
+
+
+    def insert_coins(self):
+        coin_dict = {}
+        for coin in CashBox.COIN_VALUES:
+            count = int( input(f"Enter the number of {coin}s:"))
+            coin_dict[coin] = count
+        return coin_dict
 
     def report(self):
-        print(self.money())
+        print(self.all_money)
