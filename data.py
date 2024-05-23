@@ -51,4 +51,5 @@ class CoffeeMachine():
         self.led = True
 
     def report(self):
-        print(self.resources)
+        for item in self.resources:
+            print(f"-{item}:{self.resources[item]}")
