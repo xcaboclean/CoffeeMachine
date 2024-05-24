@@ -78,7 +78,6 @@ class CashBox():
 
     def all_money(self, coin_dict):
         for coin, count in coin_dict.items():
-            if coin in self.COIN_VALUES and isinstance(count, int) and count > 0:
                 index = list(self.COIN_VALUES.keys()).index(coin)
                 self.coins[index] += count
                 self.all_money += self.COIN_VALUES[coin] * count
