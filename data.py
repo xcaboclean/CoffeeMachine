@@ -82,8 +82,7 @@ class CashBox():
                 index = list(self.COIN_VALUES.keys()).index(coin)
                 self.coins[index] += count
                 self.all_money += self.COIN_VALUES[coin] * count
-            else:
-                print("Invalid coin type.")
+
 
     def insert_coins(self):
         coin_dict = {}
