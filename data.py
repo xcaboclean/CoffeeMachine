@@ -54,38 +54,30 @@ class CoffeeMachine():
         for item in self.resources:
             print(f"-{item}:{self.resources[item]}")
 
+
 class CashBox():
-    CURRENCY={"$"}
+    CURRENCY = {"$"}
+    QUARTER_VALUE = 0.25
+    DIME_VALUE = 0.10
+    NICKEL_VALUE = 0.05
+    PENNY_VALUE = 0.01
 
-    COIN_VALUES = {
-        "quarter":0.25,
-        "dime": 0.10,
-        "nickle": 0.05,
-        "penne": 0.01,
-    }
+    def __init__(self, quarters=0, dimes=0, nickels=0, pennies=0):
+        self.quarters = quarters
+        self.dimes = dimes
+        self.nickels = nickels
+        self.pennies = pennies
 
-    def __init__(self):
-        self.coins = [0,0,0,0] # [quarters, dimes, nickles, pennies]
-        self.all_money = 0.0
-        self.received = 0.0
-        self.change = 0.0
+    def add_coins(self):
+        self.quarters += int(input("Enter the number of quarters: "))
+        self.dimes += int(input("Enter the number of dimes: "))
+        self.nickels += int(input("Enter the number of nickles: "))
+        self.pennies += int(input("inputEnter the number of pennes:"))
 
-    def insert_money(self, coin_dict):
-        for coin, count in coin_dict.items():
-            if coin in self.COIN_VALUES and isinstance(count, int) and count > 0:
-                index = list(self.COIN_VALUES.keys()).index(coin)
-                self.coins[index] += count
-                self.all_money += self.COIN_VALUES[coin] * count
-            else:
-                print("Invalid coin type.")
-
-
-    def insert_coins(self):
-        coin_dict = {}
-        for coin in CashBox.COIN_VALUES:
-            count = int( input(f"Enter the number of {coin}s:"))
-            coin_dict[coin] = count
-        return coin_dict
-
-    def report(self):
-        print(self.all_money)
+    def report(self, quarters=0, dimes=0, nickels=0, pennies=0):
+        total = (self.quarters * self.QUARTER_VALUE +
+                 self.dimes * self.DIME_VALUE +
+                 self.nickels * self.NICKEL_VALUE +
+                 self.pennies * self.PENNY_VALUE
+                 )
+        print(f"{self.CURRENCY}:{total}")

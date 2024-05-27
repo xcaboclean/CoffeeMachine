@@ -23,13 +23,10 @@ while machine.led == True:
         machine.power_off()
     elif order =="report":
         machine.report()
-        print(cash_box.all_money)
+        cash_box.report()
     else:
         drink = menu.get_item(order)
         print(drink)
-        coin_dict = cash_box.insert_coins()
-        cash_box.insert_money(coin_dict)
-
-
+        cash_box.add_coins()
 
 
