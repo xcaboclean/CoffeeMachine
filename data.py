@@ -6,7 +6,7 @@ class Item:
         self.ingredients = {
             "water": water,
             "milk": milk,
-            "coffe": coffee
+            "coffee": coffee
         }
 
 
@@ -50,34 +50,19 @@ class CoffeeMachine():
     def power_on(self):
         self.led = True
 
+    def check_resources(self, drink):
+        resources_ok = True
+        for item in drink.ingredients:
+            if drink.ingredients[item] > self.resources[item]:
+                print(f"Sorry there is not enough {item}.")
+                resources_ok = False
+        return resources_ok
+
     def report(self):
         for item in self.resources:
             print(f"-{item}:{self.resources[item]}")
 
-
-class CashBox():
-    CURRENCY = {"$"}
-    QUARTER_VALUE = 0.25
-    DIME_VALUE = 0.10
-    NICKEL_VALUE = 0.05
-    PENNY_VALUE = 0.01
-
-    def __init__(self, quarters=0, dimes=0, nickels=0, pennies=0):
-        self.quarters = quarters
-        self.dimes = dimes
-        self.nickels = nickels
-        self.pennies = pennies
-
-    def add_coins(self):
-        self.quarters += int(input("Enter the number of quarters: "))
-        self.dimes += int(input("Enter the number of dimes: "))
-        self.nickels += int(input("Enter the number of nickles: "))
-        self.pennies += int(input("inputEnter the number of pennes:"))
-
-    def report(self, quarters=0, dimes=0, nickels=0, pennies=0):
-        total = (self.quarters * self.QUARTER_VALUE +
-                 self.dimes * self.DIME_VALUE +
-                 self.nickels * self.NICKEL_VALUE +
-                 self.pennies * self.PENNY_VALUE
-                 )
-        print(f"{self.CURRENCY}:{total}")
+    def make_coffee(self, order):
+        for item in order.ingredients:
+            self.resources[item] -= order.ingredients[item]
+        print(f"Here is your {order.name} ☕️. Enjoy!")
