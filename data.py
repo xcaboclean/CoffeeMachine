@@ -66,3 +66,40 @@ class CoffeeMachine():
         for item in order.ingredients:
             self.resources[item] -= order.ingredients[item]
         print(f"Here is your {order.name} ☕️. Enjoy!")
+
+class CashRegister:
+    CURRENCY = "$"
+    COIN_VALUES = {
+        "quarters": 0.25,
+        "dimes": 0.10,
+        "nickles": 0.05,
+        "pennies": 0.01
+    }
+
+    def __init__(self):
+        self.money = 0
+        self.coin_collector = 0
+
+    def report(self):
+        print(f"Money: {self.CURRENCY}{self.money}")
+
+
+    def process_coins(self):
+        print("Please insert coins.")
+        for coin in self.COIN_VALUES:
+            self.coin_collector += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
+        return self.coin_collector
+
+
+    def payment(self, cost):
+        self.process_coins()
+        if self.coin_collector >= cost:
+            change = round(self.coin_collector - cost, 2)
+            print(f"Here is {self.CURRENCY} {change} in change. ")
+            self.money += cost
+            self.coin_collector = 0
+            return True
+        else:
+            print("Sorry that's not enough money. Money refunded.")
+            self.coin_collector = 0
+            return  False
